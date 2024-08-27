@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>validation programme</title>
+<script type ="text/Javascript">
+  function chk()
+   {
+    var n1,a1,p1,e1,;
+	n1=fr1.name1.value;
+    a1=fr1.address1.value;
+	p1=fr1.phone1.value;
+	e1=fr1.email1.value;
+	if(n1==""||a1==""||p1==""||e1=="")
+	{
+	 alert ("all fields are mandatory");
+	 return true;
+	}
+	if(isNaN(p1)==true)
+	{alert("phone number should contain digits only ");
+	return true;
+	}
+	if(p1.length>10)
+	{
+	alert("telephone number should be of maximum 10 digits ");
+	 return true;
+	}
+	//var reg=/^6([A-za-z0-9_\-\\/.])+\@([A-Za-Z0-9_\-\.])+\.(A-Za-z]{2,4})$/;
+	
+	var reg=^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,}$;
+	if(reg.test(e1)==false)
+	{
+	alert("Invalid email :--"+e1);
+	return true;
+	}
+	document.getElementById("Demo").style.color="darkgreen";
+	document.getElementById("Demo").innerHTML="Valid data-->"+e1;
+	return;
+	}
+	</script>
+</head>
+<body  style="color:brown; background-color:gold;">
+    <center>
+	<form name="fr1" >
+	<h2 style="color:black; font-size:40px;" >User data Validation Programme</h2>
+	<table style="border: 5px double red; border-radius:10px;" >
+	<tr>
+	<td> <b> Enter name:--</b>
+	<td><input type="text" name="name1" id="n11" required>
+	</tr>
+	<tr>
+	<td> <b> Enter Adress:--</b>
+	<td><textarea name="address1" id="a11"  placeholder="type address"	required></textarea>
+	</tr>
+	<tr>
+	<td> <b> Telephone</b>
+	<td><input type="number" name="phone1" id="p11" required>
+	</tr>
+	<tr>
+	<td> <b> Enter Email:--</b>
+	<td><input type="email" name="email1" id="e11" placeholder="Enter Email" required pattern="^[\w]{1,}[\w]{1,}[\w.+]{0,}@[\w-]{2,}([.])[a-zA-Z0-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,}|$">
+	<!--"^[a-Z0-Z-9-]+(\.[a-Z0-Z-9]+)*(\.[a-zA-Z]{2,15})$"/>-->
+	</tr>
+	</table>
+	<br><br>
+	<p id="demo" syle="color:red;"></p>
+	<input type="submit"  name="button1" id="b11" onclick="chk()">
+	<input type="reset" name="reset1" id="r11" value="reset">
+	</form>
+	</center>
+	</body>
+	</html>
+	
+	

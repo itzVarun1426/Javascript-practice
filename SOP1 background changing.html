@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>background changing programme</title>
+<script type="text/Javascript">
+var varry ;
+function color1() 
+{
+document.bgColor = "cyan" ;
+window.setTimeout("color2()" , 1000);
+}
+function color2() 
+{ 
+document.bgColor = "red" ;
+window.setTimeout("color3()" , 1000);
+}
+function color3() 
+{ 
+document.bgColor = "black" ;
+window.setTimeout("color4()" , 1000);
+}
+function color4() 
+{
+document.bgColor = "blue" ;
+window.setTimeout("color5()" , 1000);
+}
+function color5()
+{
+document.bgColor = "green" ;
+window.setTimeout("color6()" , 1000);                              
+}
+function color6()
+{
+document.bgColor = "orange" ;
+window.setTimeout("color7()" , 1000);                              
+}
+function color7() {
+document.bgColor = "purple";
+window.setTimeout("color1()", 1000);
+}
+</script>
+</head>
+<body onpageshow="color1()">
+    <h1>
+       <center>
+        <input type="button" name="b1" value="run the function " onmouseover=" color1() ">
+       </center>
+    </h1>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>check area of triagle </title>
+<script type="text/Javascript">
+function triarea( )
+{
+   var  b,h;
+   b=parseFloat(form1.b1.value);
+   h=parseFloat(form1.h1.value);
+   alert("the area of triangle is " + 0.5*b*h);
+}
+</script>
+</head>
+<body bgcolor="silver">
+    <fieldset style="text-align:center; font-size:2rem">
+    <form name="form1" method="post" text-align="center">
+	  <lable>Enter the measure of height:</lable> 
+		<input type="number" name="h1" placeholder="enter the height" ><br><br>
+	  <lable>Enter the measure of base:</lable> 
+		<input type="number" name="b1" placeholder="enter the base" ><br><br>
+		<input type="button" name="bt1" value="calculate" onclick="triarea()">
+	</form>
+	</fieldset>
+</body>
+</html>

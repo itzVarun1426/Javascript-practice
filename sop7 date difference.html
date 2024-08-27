@@ -1,0 +1,37 @@
+<html>   
+<head>   
+    <title> Calculate days between dates </title>   
+      <script>  
+       function days() 
+       {    
+         var date1 = document.getElementById("dateInput1").value;  
+         var date2 = document.getElementById("dateInput2").value; 
+        var date1 = new Date(date1);  
+         var date2 = new Date(date2);  
+        var time_difference = date2.getTime() - date1.getTime();  
+        var result = time_difference / (1000 * 60 * 60 * 24);  
+         document.getElementById("result").innerHTML =    
+            result + " days between both dates. ";  
+        }  
+      </script>    
+</head>    
+<body>   
+    <h2 style="color:red ; text-align:Center">    
+            Calculate the difference Between dates<br> <br>   
+    </h2>
+        <p align="Center"> 
+          <b> Enter the starting date :-</b>   
+        <input type="date" id="dateInput1"><br> <br>  
+        </p>
+        <p align="Center"> 
+          <b> Enter the last date:-</b>   
+        <input type="date" id="dateInput2">   
+        <br> <br>       
+        <button onclick="days()">   
+          Calculate number of days   
+        </button>   
+        </p>
+    <h3 style="color:red" id="result" align="center"></h3>   
+    
+</body>    
+</html>  

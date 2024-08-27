@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>temperature checking</title>
+    <script type="text/javascript">
+        function cel()
+        {
+            var f;
+            f=parseInt(fr1.cels.value);
+            document.getElementById("demo").innerHTML="Temperature in Celcius is :--  "+((f-32)*5/9);
+        }
+    </script>
+    <style>
+        div{
+            text-align: center;
+            border: 3px  dashed  black;
+            border-radius: 50px;
+            padding: 20px;
+            font-size:30px;
+        }
+        h2{
+            color:brown; 
+            font-size:40px; 
+            text-align:center;
+        }
+    </style>
+</head>
+<body bgcolor="gold" text="black">
+    <form method="post" name="fr1">
+        <fieldset>
+        <h2 >Temprature To Celsius</h2>
+        <div><label >Enter the temperature(in Farenheit)::--</label>&nbsp;&nbsp;
+            <input type="number"  name="cels" required placeholder="enter value"><br><br>
+        <input type="button" name="b1" value="check"  onclick="cel()">
+        </div>
+        </fieldset>
+        <p id="demo" style="color:purple; font-size: 25px; text-align:center;">
+    </form> 
+</body>
+</html>

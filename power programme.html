@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>power</title>
+<script type="text/Javascript">
+function pow( )
+{
+   var  b,p;
+   b=parseFloat(form1.b1.value);
+   p=parseFloat(form1.p1.value);
+   alert("the number is " + Math.pow(b,p))
+}
+</script>
+</head>
+<body bgcolor="lightgrey">
+    <fieldset style="text-align:center; font-size:2rem">
+    <form name="form1" method="post" text-align="center">
+	  <lable>Enter the measure of base:</lable> 
+		<input type="number" name="b1" placeholder="enter the base" ><br><br>
+	  <lable>Enter the measure of index:</lable> 
+		<input type="number" name="p1" placeholder="enter the power of the base" ><br><br>
+		<input type="button" name="bt1" value="calculate" onclick="pow()">
+	</form>
+	</fieldset>
+</body>
+</html>

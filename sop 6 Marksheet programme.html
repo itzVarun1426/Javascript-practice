@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>marksheet programme</title>
+        <script type="text/Javascript">
+        function marksheet()
+            {
+                var stud,roll,eng,it,mat,phy,chem,def,avg,grd;
+                stud=(f1.stud1.value);
+                roll=parseFloat(f1.roll1.value);
+                eng=parseFloat(f1.eng1.value);
+                it=parseFloat(f1.it1.value);
+                mat=parseFloat(f1.mat1.value);
+                phy=parseFloat(f1.phy1.value);
+                chem=parseFloat(f1.chem1.value);
+                def=parseFloat(f1.def1.value);
+                avg=(eng+it+mat+phy+chem+def)/6;
+                if(avg>=91)
+                {
+                    grd="A";
+                }
+                else if(avg>=81)
+                {
+                    grd="B";
+                }
+                else if(avg>=71)
+                {
+                    grd="C";
+                }
+                else if(avg>=61)
+                {
+                    grd="D";
+                }
+                else if(avg>=35)
+                {
+                    grd="F";
+                }
+                else
+                {
+                    grd=fail;
+                }
+                document.write("<table>");
+                document.write("<tr>marksheet");
+                document.write("<tr>");
+                document.write("<th>Roll No.");
+                document.write("<th>Name of The Student");
+                document.write("<th>Average Marks");
+                document.write("<th>Grade");
+                document.write("<tr>");
+                document.write("<td>"+roll);
+                document.write("<td>"+stud);
+                document.write("<td>"+avg);
+                document.write("<td>"+grd);
+                document.write("</table>");
+            }
+            
+        </script>
+        <style>
+            h1{
+                color:gold;
+                font-size: 50px;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+            </style>
+    </head>
+    <body bgcolor="black">
+        <center>
+        <form name="f1">
+            <h1  >Result</h1>
+            <hr>
+            <table style="color: aqua;" border="1" bordercolor="pink">
+            <tr><th><b>Enter your Name</b></th><td><input type="text" name="stud1"></td></tr>
+            <tr><th><b>Enter your Roll No</b></th><td><input type="text" name="roll1"></td></tr>
+            <tr><th><b>English</b></th><td><input type="number" name="eng1"></td></tr>
+            <tr><th><b>Information Technology</b></th><td><input type="number" name="it1"></td></tr>
+            <tr><th><b>Mathematics</b></th><td><input type="number" name="mat1"></td></tr>
+            <tr><th><b>Physics</b></th><td><input type="number" name="phy1"></td></tr>
+            <tr><th><b>Chemistry</b></th><td><input type="number" name="chem1"></td></tr>
+            <tr><th><b>Defence</b></th><td><input type="number" name="def1"></td></tr>
+        </table><br>
+        <input type="button" name="b1" value="Show result" onclick="marksheet()">
+        </form></center>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Document</title>
+<script type="text/javascript">
+var num=prompt("enter the value to check");
+ num=parseInt(num);
+var varry=0;
+for (i = 2; i<num; i++)  
+{
+if (num % i == 0) 
+{
+varry=1;
+break;
+}
+}
+if(varry==0)
+{
+    alert("Number is prime");
+}
+else
+ if(varry==1){
+   alert("Number is not a prime");
+}
+
+</script>
+</head> 
+<body></body>
+</html>

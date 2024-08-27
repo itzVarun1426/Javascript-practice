@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>palindrome checking </title>
+<script type="text/Javascript">
+function  pal( )
+{
+   var  i,len,str,str1;
+   str1="";
+  str=form1.string1.value;
+  len=str.length;
+  for(i=len;i>0;i--)
+  { 
+    str1 +=str.charAt(i-1);
+  }
+  if(str==str1)
+  {document.getElementById("demo").innerHTML="THE GIVEN STRING IS PALINDROME" ; }
+  else
+  {  document.getElementById("demo").innerHTML="THE  GIVEN STRING IS NOT PALINDROME" ; }
+}
+ </script>
+</head>
+<body><center>
+<h1>To Check The String Palindrome or Not</h1>
+<form method="post" name="form1" >
+<label>Enter String</label>
+<input type="text" name="string1"><br><br>
+<input type="button" name="b1" value="check" onClick="pal()">
+<p id="demo" style="color:blue; font-size:30px;">
+</p></center>
+</form>
+</body>
+</html>

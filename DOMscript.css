@@ -1,0 +1,13 @@
+.classbox{
+    height: 100px;
+    width: 100px;
+    background-color: cyan;
+    border: 2px dashed red;
+}
+.classpara{
+    height: 100px;
+    width: 100px;
+    color: burlywood;
+    background-color: darkgreen;
+    border: 2px dashed yellow;
+}
